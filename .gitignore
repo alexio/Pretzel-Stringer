@@ -34,3 +34,12 @@ appcompat
 
 # Log Files
 *.log
+
+# Android Studio
+/*/out
+/*/*/production
+*.iws
+*.ipr
+*~
+.DS_Store
+
