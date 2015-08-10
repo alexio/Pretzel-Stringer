@@ -1,16 +1,40 @@
 package com.nytimes.stringers;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+import com.nytimes.data.entity.InvestigationModel;
+import com.nytimes.stringers.views.InvestigationListView;
+import com.nytimes.stringers.views.adapter.InvestigationRowAdapter;
+
+public class MainActivity extends BaseActivity
+        implements InvestigationRowAdapter.OnItemClickListener {
+
+    public static final String stringer_id = "55c4fb089275cf4626000020";
+
+    private InvestigationListView investigationListView;
+    private RecyclerView.LayoutManager layoutManager;
+    private InvestigationRowAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        investigationListView = (InvestigationListView) findViewById(R.id.investigation_view);
+        investigationListView.setHasFixedSize(true);
+
+        layoutManager = new LinearLayoutManager(this);
+        investigationListView.setLayoutManager(layoutManager);
+
+        adapter = new InvestigationRowAdapter(this, InvestigationModel.getDummyData());
+        adapter.setItemClickListener(this);
+
+        investigationListView.setAdapter(adapter);
     }
 
     @Override
@@ -29,9 +53,19 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onInvestigationClicked(InvestigationModel model) {
+        //Navigate to investigation view
+        Intent intent = new Intent(this, InvestigationActivity.class);
+        intent.putExtra(InvestigationActivity.DATA_EXTRA, model);
+        startActivity(intent);
     }
 }
