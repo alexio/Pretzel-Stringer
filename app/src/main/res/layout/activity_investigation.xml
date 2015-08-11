@@ -8,9 +8,10 @@
 
     <com.astuetz.PagerSlidingTabStrip
         android:id="@+id/tabs"
+        android:elevation="10dp"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary" />
+        android:background="@color/colorPrimary" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/investigation_view_pager"

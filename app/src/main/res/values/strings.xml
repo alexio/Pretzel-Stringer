@@ -3,4 +3,60 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string name="font_chelt_light" translatable="false">fonts/NYTCheLightReg.ttf</string>
+    <string name="font_chelt_light_condensed" translatable="false">fonts/NYTCheltLtConReg.ttf</string>
+    <string name="font_chelt_medium" translatable="false">fonts/NYTCheMedReg.ttf</string>
+    <string name="font_chelt_medium_condensed" translatable="false">fonts/NYTCheMedConReg.ttf</string>
+
+    <string name="font_chelt_bold" translatable="false">fonts/NYTCheBolReg.ttf</string>
+    <string name="font_chelt_bold_italics" translatable="false">fonts/NYTCheBoldItal.ttf</string>
+
+    <string name="font_chelt_bold_condensed" translatable="false">fonts/NYTCheBolConReg.ttf</string>
+
+    <string name="font_chelt_sh_bold" translatable="false">fonts/NYTCheSHBold.otf</string>
+    <string name="font_chelt_sh_bold_italics" translatable="false">fonts/NYTCheSHBoldItal.ttf</string>
+    <string name="font_chelt_sh_italics" translatable="false">fonts/NYTCheSHItal.ttf</string>
+    <string name="font_chelt_sh_medium" translatable="false">fonts/NYTCheSHRoman.otf</string>
+
+    <string name="font_imperial_regular" translatable="false">fonts/NYTImpReg.ttf</string>
+    <string name="font_imperial_bold" translatable="false">fonts/NYTImpBol.ttf</string>
+    <string name="authentication_salt" translatable="false">fd8fbe1a04798ea3ed65dd72c1a37434</string>
+    <string name="font_imperial_italics" translatable="false">fonts/NYTImpIta.ttf</string>
+
+    <string name="font_franklin_light" translatable="false">fonts/NYTFraLight.otf</string>
+    <string name="font_franklin_medium" translatable="false">fonts/NYTFraMed.ttf</string>
+    <string name="font_franklin_bold" translatable="false">fonts/NYTFraBol.ttf</string>
+
+    <string name="font_mag_slab_bold" translatable="false">fonts/NYTMagSlabBold.ttf</string>
+
+    <string name="font_karnak_regular" translatable="false">fonts/NYTKarnak.ttf</string>
+    <string name="font_karnak_display" translatable="false">fonts/NYTKarnakDisplay.otf</string>
+
+    <!-- Analytics strings -->
+    <string name="attr_us_edition">US</string>
+    <string name="attr_international_edition">International</string>
+    <string name="attr_app_id">3bee564c41b04f47d141282-92bac4b0-8ae0-11df-88a5-0038f276d275</string>
+    <string name="attr_app_name">Newsreader</string>
+    <string name="attr_os">android</string>
+    <string name="attr_os_major">5</string>
+    <string name="attr_os_minor">4.1</string>
+    <string name="attr_anonymous">Anonymous</string>
+    <string name="attr_registered">Registered</string>
+    <string name="attr_subscribed">Subscribed</string>
+    <string name="attr_anonymously_subscribed">Anonymously Subscribed</string>
+
+
+    <!-- Resolution strings -->
+    <string name="mdpi" translatable="false">mdpi</string>
+    <string name="hdpi" translatable="false">hdpi</string>
+    <string name="xhdpi" translatable="false">xhdpi</string>
+    <string name="xxhdpi" translatable="false">xxhdpi</string>
+    <string name="xxxhdpi" translatable="false">xxxhdpi</string>
+
+    <!-- WebView Headers -->
+    <string name="webview_header_app_type">NYT-Android-phone</string>
+
+    <!-- part of article api key -->
+    <string name="betaRndr">0qo45qg8</string>
 </resources>

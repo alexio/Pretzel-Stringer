@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextView" parent="@android:style/Widget.TextView"/>
+
+    <style name="TextView.SpecialCharacter">
+        <item name="android:textSize">@dimen/article_body_special_text_size</item>
+    </style>
+</resources>

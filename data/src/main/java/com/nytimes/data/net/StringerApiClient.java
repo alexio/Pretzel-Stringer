@@ -1,5 +1,6 @@
 package com.nytimes.data.net;
 
+import com.nytimes.data.entity.EmptyRequestResponse;
 import com.nytimes.data.entity.RequestResult;
 import com.nytimes.data.entity.Stringer;
 
@@ -43,8 +44,8 @@ public class StringerApiClient {
 //        return stringerService.createStringer();
 //    }
 
-    public Observable setAvailability(String id, boolean available) {
-        return stringerService.setAvailability(id, available);
+    public Observable<EmptyRequestResponse> setAvailability(String id, boolean available) {
+        return stringerService.setAvailability(new Object(), id, Boolean.toString(available));
     }
 
     public Observable setCurrentLocation(String id, float currentLong, float currentLat) {

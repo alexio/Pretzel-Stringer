@@ -14,6 +14,11 @@ public class Stringer {
     public class Location {
         String type;
         float[] coordinates;
+
+        @Override
+        public String toString() {
+            return coordinates[0] + ", " + coordinates[1];
+        }
     }
 
     @SerializedName("ID")

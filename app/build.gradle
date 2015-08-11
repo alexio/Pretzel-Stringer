@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
 
+repositories {
+    jcenter()
+}
+
 android {
     compileSdkVersion 22
     buildToolsVersion "22.0.1"
@@ -29,4 +33,7 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:22.2.1'
     compile 'com.jpardogo.materialtabstrip:library:1.1.0'
     compile 'io.reactivex:rxandroid:1.0.1'
+
+    compile 'com.github.dmytrodanylyk.android-process-button:library:1.0.4'
+    compile 'com.github.rey5137:material:1.2.1'
 }

@@ -1,30 +1,71 @@
 <resources>
 
     <!-- Base application theme. -->
+    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light">
-        <!-- Customize your theme here. -->
-        <!--<item name="windowActionBar">false</item>-->
-        <!--<item name="windowNoTitle">true</item>-->
-        <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette-->
-        <!-- colorPrimary is used for the default action bar background -->
-        <item name="android:colorPrimary">#2196F3</item>
-        <!-- colorPrimaryDark is used for the status bar -->
-        <item name="android:colorPrimaryDark">#1976D2</item>
-        <!-- colorAccent is used as the default value for colorControlActivated
-             which is used to tint widgets -->
-        <item name="android:colorAccent">#FF4081</item>
-        <!-- You can also set colorControlNormal, colorControlActivated
-             colorControlHighlight and colorSwitchThumbNormal. -->
-        <item name="actionBarStyle">@style/ActionBarStyle</item>
+        <item name="android:textViewStyle">@style/TextView</item>
 
-        <!--<item name="android:windowBackground">@color/material_blue_grey_800</item>-->
+        <!-- action bar specifics -->
+        <item name="actionBarTheme">@style/AppTheme.ActionbarTheme</item>
+        <item name="toolbarStyle">@style/AppTheme.ToolbarStyle</item>
+
+        <item name="actionOverflowButtonStyle">@style/AppTheme.ActionbarStyle.OverflowStyle</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeStyle">@style/AppTheme.ActionModeStyle</item>
+
+        <!-- themes to add control to: https://developer.android.com/training/material/theme.html#StatusBar -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+        <item name="android:progressBarStyle">@style/AppTheme.ProgressBarStyle</item>
+
+        <item name="android:textColorLink">@color/blueLink</item>
+    </style>
+
+    <style name="AppTheme.ActionModeStyle" parent="Widget.AppCompat.ActionMode">
+
+    </style>
+
+    <style name="AppTheme.ProgressBarStyle" parent="android:Widget.Holo.ProgressBar" />
+
+    <style name="AppTheme.ActionbarTheme" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="titleTextAppearance">@style/AppTheme.ToolbarStyle.TextAppearance</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_app_bar_back</item>
+        <item name="homeAsUpIndicator">@drawable/ic_app_bar_back</item>
+    </style>
+
+    <style name="AppTheme.ToolbarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@drawable/toolbar_background_with_shadow</item>
+        <item name="titleTextAppearance">@style/AppTheme.ToolbarStyle.TextAppearance</item>
+    </style>
+
+    <style name="AppTheme.ToolbarStyle.Borderless" parent="AppTheme.ToolbarStyle">
+        <item name="android:background">?attr/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.ToolbarStyle.TextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/gray25</item>
+    </style>
+
+    <style name="AppTheme.ActionbarStyle.OverflowStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_app_bar_overflow</item>
     </style>
 
 
-    <!-- ActionBar styles -->
-    <style name="ActionBarStyle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
-        <item name="android:background">#607D8B</item>
+    <style name="Theme.AppCompat.Translucent" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
 
-        <!-- Support library compatibility -->
+        <item name="windowActionBar">false</item>
+
     </style>
 </resources>

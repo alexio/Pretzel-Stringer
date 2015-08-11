@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000</color>
+    <color name="black_10_percent">#1A000000</color>
+    <color name="black_40_percent">#66000000</color>
+    <color name="black_50_percent">#80000000</color>
+    <color name="black_75_percent">#BF000000</color>
+    <color name="black_80_percent">#CC000000</color>
+    <color name="black_85_percent">#CF000000</color>
+    <color name="black_90_percent">#E6000000</color>
+
+
+    <color name="gray10">#1a1a1a</color>
+    <color name="gray10_90">#E61a1a1a</color>
+    <color name="gray15">#222</color>
+    <color name="gray15_85">#CF222222</color>
+    <color name="gray20">#333</color>
+    <color name="gray25">#505050</color>
+    <color name="gray30">#666</color>
+    <color name="gray35">#808080</color>
+    <color name="gray40">#999</color>
+    <color name="gray45">#b3b3b3</color>
+    <color name="gray50">#ccc</color>
+    <color name="gray60">#e3e3e3</color>
+    <color name="gray70">#ebebeb</color>
+    <color name="gray80">#f3f3f3</color>
+    <color name="gray90">#f7f7f7</color>
+    <color name="gray95">#fafafa</color>
+    <color name="gray100">#a5a5a5</color>
+    <color name="gray246">#f6f6f6</color>
+    <color name="grey240">#cccccc</color>
+
+    <color name="white">#fff</color>
+    <color name="white50">#80ffffff</color>
+
+    <color name="blue10">#035389</color>
+    <color name="blue20">#3884B7</color>
+    <color name="blue30">#298bcb</color>
+    <color name="blueLink">#326891</color>
+
+    <color name="red10">#a81817</color>
+    <color name="red20">#d31e25</color>
+    <color name="red30">#ff392f</color>
+
+    <!-- Best Sellers arrow colors -->
+    <color name="arrow_green">#7ED321</color>
+    <color name="arrow_red">#D31E25</color>
+
+    <!-- widget -->
+    <!--<color name="widget_list_background">@color/legacy_gray2</color>-->
+    <!--<color name="widget_list_background_shadow">@color/legacy_black1</color>-->
+    <color name="widget_list_background">#191C1E</color>
+    <color name="widget_list_header_background">@color/black</color>
+    <color name="widget_list_divider_color">@color/gray25</color>
+    <color name="widget_list_subtext_color">@color/gray40</color>
+    <color name="widget_list_text_color">@color/white</color>
+
+    <color name="caption_title_color">@color/gray30</color>
+    <color name="caption_title_color_lede">@color/gray30</color>
+    <color name="fullscreen_media_background">@color/gray10</color>
+    <color name="fullscreen_media_header_background">@color/fullscreen_media_background</color>
+    <color name="fullscreen_media_overlay_view_background">@color/gray15_85</color>
+
+    <color name="fullscreen_media_action_bar_item_background">@color/gray15</color>
+    <color name="fullscreen_media_action_bar_item_textColor">@color/gray60</color>
+
+    <color name="dim_foreground_dark">#bebebe</color>
+    <color name="drawer_overlay">#26000000</color>
+
+    <!-- we put copies of the attributes we set here because
+    drawable assets cannot reference ?attr/etc -->
+    <color name="colorPrimary">@color/gray95</color>
+    <color name="colorPrimaryDark">@color/black</color>
+    <color name="colorAccent">@color/blue20</color>
+    <color name="windowBackground">@color/white</color>
+
+    <!-- test colors to set for tools:background so they are obvious in previewer -->
+    <color name="test_orange">@android:color/holo_orange_light</color>
+    <color name="test_red">@android:color/holo_red_light</color>
+    <color name="test_blue">@android:color/holo_blue_bright</color>
+    <color name="test_blue_trans">#8800ddff</color>
+
+    <color name="meter_background_end">#0D000000</color>
+    <color name="meter_background_start">#F2222222</color>
+
+    <color name="nytimes_button_inactive">#803884B7</color>
+    <color name="nytimes_view_button_active">#3884B7</color>
+    <color name="nytimes_view_button_pressed">#035389</color>
+
+    <!-- Groups -->
+    <color name="group_header_live">#D31E25</color>
+    <color name="group_header_breaking">#D31E25</color>
+    <color name="group_header_developing">#EB6E00</color>
+    <color name="group_header_opinion">#0BB4F7</color>
+
+
+    <!-- Section/Search Front UnRead State -->
+    <color name="headlineText">@color/black</color>
+    <color name="kickerText">@color/black</color>
+    <color name="summaryText">@color/gray30</color>
+
+    <!-- Section/Search Read State -->
+    <color name="headlineTextRead">@color/gray35</color>
+    <color name="kickerTextRead">@color/gray30</color>
+    <color name="summaryTextRead">@color/gray40</color>
+</resources>
