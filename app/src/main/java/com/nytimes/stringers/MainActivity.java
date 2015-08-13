@@ -14,7 +14,7 @@ import com.nytimes.stringers.views.adapter.InvestigationRowAdapter;
 public class MainActivity extends BaseActivity
         implements InvestigationRowAdapter.OnItemClickListener {
 
-    public static final String stringer_id = "55c4fb089275cf4626000020";
+    public static final String stringer_id = "55c4fae79275cf4626000001";
 
     private InvestigationListView investigationListView;
     private RecyclerView.LayoutManager layoutManager;

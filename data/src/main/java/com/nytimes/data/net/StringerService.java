@@ -38,7 +38,7 @@ public interface StringerService {
     Observable<EmptyRequestResponse> setAvailability(@Body Object dummyBody,
             @Query("id") String id, @Query("available") String available);
 
-    @POST("/currentlocation.json?id={id}&currentLong={currentLong}&currentLat={currantLat}")
-    Observable<RequestResult> setCurrentLocation(@Path("id") String id, @Path("currentLong") float currentLong,
-                                  @Path("currentLat") float currentLat);
+    @POST("/currentlocation.json")
+    Observable<EmptyRequestResponse> setCurrentLocation(@Body Object dummyBody, @Query("id") String id, @Query("currentLong") String currentLong,
+                                  @Query("currentLat") String currentLat);
 }

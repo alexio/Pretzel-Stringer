@@ -1,5 +1,6 @@
 package com.nytimes.stringers;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -54,19 +55,28 @@ public class SettingsActivity extends BaseActivity implements Switch.OnCheckedCh
         availibilityToggle.setOnCheckedChangeListener(this);
 
         updateLocation = (ActionProcessButton) findViewById(R.id.updateLocation);
+        final Context context = this;
         updateLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                updateLocation.setMode(ActionProcessButton.Mode.ENDLESS);
-                Runnable task = new Runnable() {
-                    @Override
-                    public void run() {
-                        updateLocation.setProgress(1);
-                        updateLocation.setProgress(50);
-                        updateLocation.setProgress(100);
-                    }
-                };
-                worker.schedule(task, 10, TimeUnit.SECONDS);
+                final float currentLong = -73.990100f;
+                final float currentLat = 40.756096f;
+                stringerApiClient.setCurrentLocation(MainActivity.stringer_id, currentLong, currentLat)
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(new Action1<EmptyRequestResponse>() {
+                            @Override
+                            public void call(EmptyRequestResponse emptyRequestResponse) {
+                                Toast.makeText(context, "Updated your location!", Toast.LENGTH_LONG).show();
+                                location.setText(Float.toString(currentLong) + ", " + Float.toString(currentLat));
+                            }
+                        }, new Action1<Throwable>() {
+                            @Override
+                            public void call(Throwable throwable) {
+                                Log.e("**", "Error", throwable);
+                                Toast.makeText(context, "Error updating location!", Toast.LENGTH_SHORT).show();
+                            }
+                        });
             }
         });
 

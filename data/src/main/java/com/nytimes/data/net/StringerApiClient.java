@@ -48,7 +48,7 @@ public class StringerApiClient {
         return stringerService.setAvailability(new Object(), id, Boolean.toString(available));
     }
 
-    public Observable setCurrentLocation(String id, float currentLong, float currentLat) {
-        return stringerService.setCurrentLocation(id, currentLong, currentLat);
+    public Observable<EmptyRequestResponse> setCurrentLocation(String id, float currentLong, float currentLat) {
+        return stringerService.setCurrentLocation(new Object(), id, Float.toString(currentLong), Float.toString(currentLat));
     }
 }

@@ -2,12 +2,19 @@ package com.nytimes.stringers;
 
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.Window;
 import android.widget.Toast;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.nytimes.data.entity.InvestigationModel;
 import com.nytimes.stringers.views.adapter.InvestigationPageAdapter;
+import com.nytimes.stringers.views.viewholder.InvestigationViewHolder;
+import com.parse.LogInCallback;
+import com.parse.Parse;
+import com.parse.ParseAnonymousUtils;
+import com.parse.ParseException;
+import com.parse.ParseUser;
 
 /**
  * Created by alexio on 8/9/15.
@@ -17,6 +24,7 @@ public class InvestigationActivity extends BaseActivity {
     public static final String DATA_EXTRA = "data_extra";
     ViewPager viewPager;
     InvestigationModel investigationModel;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
